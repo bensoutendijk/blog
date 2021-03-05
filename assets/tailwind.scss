@@ -1,0 +1,60 @@
+@font-face {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(~/assets/fonts/Quicksand-Regular.ttf);
+}
+
+@font-face {
+  font-family: Quicksand;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(~/assets/fonts/Quicksand-Bold.ttf);
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(~/assets/fonts/OpenSans-Regular.ttf);
+}
+
+@font-face {
+  font-family: OpenSans;
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(~/assets/fonts/OpenSans-Bold.ttf);
+}
+
+
+html {
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+body {
+  overflow: overlay;
+  font-family: OpenSans;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.chip {
+  @apply ml-1 mr-1 p-1 pl-2 pr-2 rounded-xl bg-gray-300;
+}
