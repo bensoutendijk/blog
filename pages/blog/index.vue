@@ -37,8 +37,12 @@ export default {
 <style lang="scss">
 .blog-home {
   .container {
-    @apply h-full w-2/5;
+    @apply h-full w-full;
     @apply mx-auto mt-2 pl-2;
+
+    @media (min-width: 768px) {
+      max-width: 768px;
+    }
   }
 }
 </style>

@@ -63,8 +63,12 @@ article {
   }
 
   .container {
-    @apply h-full w-2/5 mx-auto;
-    @apply pl-2;
+    @apply h-full w-full mx-auto;
+    @apply p-2;
+
+    @media (min-width: 768px) {
+      max-width: 768px;
+    }
   }
 }
 </style>

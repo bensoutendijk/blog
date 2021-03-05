@@ -31,8 +31,12 @@ export default {
 
 <style lang="scss">
 .post-preview {
-  @apply flex;
+  @apply flex flex-col;
   @apply p-4 rounded;
+
+  @media (min-width: 768px) {
+    @apply flex-row;
+  }
 
   h2 {
     @apply text-xl;
@@ -51,7 +55,11 @@ export default {
   }
 
   img {
-    @apply h-32 w-32;
+    @apply h-24 w-full;
+
+    @media (min-width: 768px) {
+      @apply w-24;
+    }
   }
 }
 

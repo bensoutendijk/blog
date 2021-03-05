@@ -5,24 +5,24 @@
         <img src="@/assets/images/Rasmus.png" alt="logo-image" />
         <span>@bensoutendijk</span>
       </a>
-      <nav class="topbar-nav">
+      <!-- <nav class="topbar-nav">
         <nuxt-link to="/blog" class="topbar-nav-button">Blog</nuxt-link>
-        <!-- <nuxt-link to="/projects" class="topbar-nav-button">Projects</nuxt-link> -->
-        <!-- <nuxt-link to="/about" class="topbar-nav-button">About Me</nuxt-link> -->
+        <nuxt-link to="/projects" class="topbar-nav-button">Projects</nuxt-link>
+        <nuxt-link to="/about" class="topbar-nav-button">About Me</nuxt-link>
         <div class="topbar-nav-search">
           <i class="fal fa-search"></i>
           <search-input id="topbar-search" />
         </div>
-      </nav>
+      </nav> -->
     </div>
   </div>
 </template>
 
 <script>
-import SearchInput from '@/components/SearchInput'
+// import SearchInput from '@/components/SearchInput'
 export default {
   components: {
-    SearchInput,
+    // SearchInput,
   },
 }
 </script>
@@ -36,8 +36,13 @@ export default {
   border-bottom: 1px solid $border-primary;
 
   .container {
-    @apply flex items-center;
-    @apply h-full w-2/3 mx-auto;
+    @apply flex flex-col justify-center items-center;
+    @apply h-full w-full mx-auto;
+
+    @media (min-width: 768px) {
+      @apply flex-row justify-start;
+      max-width: 768px;
+    }
   }
   .logo {
     @apply flex items-center;
