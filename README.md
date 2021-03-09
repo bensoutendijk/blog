@@ -1,4 +1,5 @@
-# blog
+# Nuxt Content Blog
+[https://soutendijk.org/](https://soutendijk.org/)
 
 ## Build Setup
 
