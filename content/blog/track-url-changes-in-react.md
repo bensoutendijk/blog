@@ -2,7 +2,7 @@
 title: Tracking URL changes with React
 description: Use React hooks to fire a callback whenever the route changes for React Router
 img: React.svg
-tags: web dev, react, javascript
+tags: tutorial, web dev, react, javascript
 ---
 In this article, we'll show you how to use the built-in `useHistory` hook to track route changes in React Router.
 

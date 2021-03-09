@@ -73,6 +73,6 @@ export default {
 }
 
 .post-tags {
-  @apply flex;
+  @apply flex flex-wrap;
 }
 </style>
