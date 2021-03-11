@@ -16,14 +16,14 @@
         </div>
       </div>
 
-      <nav>
-        <nuxt-link to="/blog" class="button" @click.native="toggle">
+      <nav @click="toggle">
+        <nuxt-link to="/blog" class="button">
           <span>Blog</span>
         </nuxt-link>
-        <nuxt-link to="/projects" class="button" @click.native="toggle">
+        <nuxt-link to="/projects" class="button">
           <span>Portfolio</span>
         </nuxt-link>
-        <nuxt-link to="/about" class="button" @click.native="toggle">
+        <nuxt-link to="/about" class="button">
           <span>About Me</span>
         </nuxt-link>
       </nav>
@@ -37,6 +37,13 @@ export default {
     return {
       isActive: false,
     }
+  },
+  watch: {
+    $route() {
+      if (this.isActive) {
+        this.toggle()
+      }
+    },
   },
   methods: {
     toggle() {
