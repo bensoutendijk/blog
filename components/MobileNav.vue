@@ -21,7 +21,7 @@
           <span>Blog</span>
         </nuxt-link>
         <nuxt-link to="/projects" class="button" @click.native="toggle">
-          <span>Projects</span>
+          <span>Portfolio</span>
         </nuxt-link>
         <nuxt-link to="/about" class="button" @click.native="toggle">
           <span>About Me</span>

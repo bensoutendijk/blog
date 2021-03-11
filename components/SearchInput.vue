@@ -1,10 +1,10 @@
 <template>
   <div class="searchbar">
-    <input v-model="searchQuery" type="text" name="search" autocomplete="off" />
+    <input v-model="searchQuery" type="text" name="search" autocomplete="off" placeholder="Blog Search" />
     <div v-if="posts.length" class="search-results">
       <ul class="search-results-container">
         <li v-for="post of posts" :key="post.path">
-          <nuxt-link :to="post.path">
+          <nuxt-link :to="post.path" @click.native="clear">
             {{ post.title }}
           </nuxt-link>
         </li>
@@ -27,10 +27,7 @@ export default {
         this.posts = []
         return
       }
-      this.posts = await this.$content('blog')
-        .limit(6)
-        .search(searchQuery)
-        .fetch()
+      this.posts = await this.$content('blog').limit(6).search(searchQuery).fetch()
     },
   },
   methods: {

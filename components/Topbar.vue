@@ -8,7 +8,7 @@
       <mobile-nav />
       <nav class="topbar-nav">
         <nuxt-link to="/blog" class="topbar-nav-button">Blog</nuxt-link>
-        <nuxt-link to="/projects" class="topbar-nav-button">Projects</nuxt-link>
+        <nuxt-link to="/projects" class="topbar-nav-button">Portfolio</nuxt-link>
         <nuxt-link to="/about" class="topbar-nav-button">About Me</nuxt-link>
         <div class="topbar-nav-search">
           <i class="fal fa-search"></i>
@@ -87,6 +87,9 @@
     @apply bg-white shadow;
 
     position: absolute;
+    z-index: 1;
+
+    transform: translateX(-26px);
   }
 }
 </style>

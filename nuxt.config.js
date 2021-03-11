@@ -17,7 +17,7 @@ export default {
   css: ['~/assets/tailwind.scss', '~/assets/css/fontawesome.min.css'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [{ src: '~/plugins/gtm.js', mode: 'client' }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
