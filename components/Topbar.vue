@@ -5,7 +5,8 @@
         <img src="@/assets/images/Rasmus.png" alt="logo-image" />
         <span>@bensoutendijk</span>
       </a>
-      <!-- <nav class="topbar-nav">
+      <mobile-nav />
+      <nav class="topbar-nav">
         <nuxt-link to="/blog" class="topbar-nav-button">Blog</nuxt-link>
         <nuxt-link to="/projects" class="topbar-nav-button">Projects</nuxt-link>
         <nuxt-link to="/about" class="topbar-nav-button">About Me</nuxt-link>
@@ -13,19 +14,12 @@
           <i class="fal fa-search"></i>
           <search-input id="topbar-search" />
         </div>
-      </nav> -->
+      </nav>
     </div>
   </div>
 </template>
 
-<script>
-// import SearchInput from '@/components/SearchInput'
-export default {
-  components: {
-    // SearchInput,
-  },
-}
-</script>
+<script></script>
 
 <style lang="scss">
 @import '~/assets/variables.scss';
@@ -33,10 +27,8 @@ export default {
 .topbar {
   @apply h-20;
 
-  border-bottom: 1px solid $border-primary;
-
   .container {
-    @apply flex flex-col justify-center items-center;
+    @apply flex justify-between items-center;
     @apply h-full w-full mx-auto;
 
     @media (min-width: 768px) {
@@ -61,7 +53,11 @@ export default {
 }
 
 .topbar-nav {
-  @apply flex flex-grow;
+  @apply hidden;
+
+  @media (min-width: 768px) {
+    @apply flex flex-grow;
+  }
 }
 
 .topbar-nav-button {

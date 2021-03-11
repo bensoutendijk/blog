@@ -61,6 +61,10 @@ export default {
       @apply w-24;
     }
   }
+
+  .chip {
+    @apply m-1 ml-0 p-1 pl-2 pr-2 rounded-xl bg-gray-300;
+  }
 }
 
 .post-preview-content {

@@ -1,13 +1,15 @@
 <template>
-  <div>
+  <div class="searchbar">
     <input v-model="searchQuery" type="text" name="search" autocomplete="off" />
-    <ul v-if="posts.length" class="search-results">
-      <li v-for="post of posts" :key="post.path">
-        <nuxt-link :to="post.path">
-          {{ post.title }}
-        </nuxt-link>
-      </li>
-    </ul>
+    <div v-if="posts.length" class="search-results">
+      <ul class="search-results-container">
+        <li v-for="post of posts" :key="post.path">
+          <nuxt-link :to="post.path">
+            {{ post.title }}
+          </nuxt-link>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
@@ -29,6 +31,11 @@ export default {
         .limit(6)
         .search(searchQuery)
         .fetch()
+    },
+  },
+  methods: {
+    clear() {
+      this.searchQuery = ''
     },
   },
 }
