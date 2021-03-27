@@ -41,7 +41,7 @@ export default {
     a {
       @apply flex justify-center items-center text-center;
       @apply mr-2 h-12 w-24;
-      @apply bg-gray-300 rounded;
+      @apply text-black bg-gray-300 rounded;
 
       @apply duration-75 ease-in;
 
@@ -89,6 +89,10 @@ export default {
   p {
     @apply mb-2;
     font-family: OpenSans;
+  }
+
+  a {
+    @apply text-orange-400;
   }
 }
 </style>

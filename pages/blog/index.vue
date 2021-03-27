@@ -17,11 +17,7 @@ export default {
   },
 
   async asyncData({ $content }) {
-    const posts = await $content('blog')
-      .limit(50)
-      .only(['title', 'description', 'img', 'tags', 'path'])
-      .sortBy('createdAt', 'asc')
-      .fetch()
+    const posts = await $content('blog').limit(50).only(['title', 'description', 'img', 'tags', 'path']).sortBy('createdAt', 'asc').fetch()
 
     return { posts }
   },
