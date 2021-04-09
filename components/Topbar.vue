@@ -2,7 +2,7 @@
   <div class="topbar">
     <div class="container">
       <a href="/" class="logo">
-        <img src="@/assets/images/Rasmus.png" alt="logo-image" />
+        <img src="@/assets/images/Rasmus.webp" alt="logo-image" />
         <span>@bensoutendijk</span>
       </a>
       <mobile-nav />
